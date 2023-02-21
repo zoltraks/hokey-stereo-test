@@ -781,7 +781,7 @@ Second envelope is delayed by 1 frame (20 ms).
 
 [Download →](https://drive.google.com/file/d/13IBsgB0fdWhNCL-XGJdNmCXPUu7FJd1a/view?usp=share_link)
 
-Mono module.
+MONO module.
 
 Both envelopes match.
 
@@ -829,7 +829,7 @@ Both envelopes match.
 
 [Download →](https://drive.google.com/file/d/167O8SlOsKBGXMCE6CqYu4I_j49m-3p2T/view?usp=share_link)
 
-Mono module.
+MONO module.
 
 Both envelopes match.
 
@@ -872,6 +872,18 @@ Both envelopes match.
 </div>
 
 <!-- -->
+
+# Conslusions
+
+1) HOKEY gra za cicho i to nie -6 dB ale raczej -10 dB
+
+2) HOKEY jest rozstrojony, bo jest prawdopodobnie przeznaczony dla maszyny NTSC, co w połączeniu z maszyną PAL daje przesunięcie częstotliwości na nieco wyższe
+
+3) HOKEY nie odgrywa najwyższych częstotliwości szumów
+
+4) HOKEY ma jakieś bugi w generowaniu czystego tonu (ale może być to wynikiem punktu drugiego)
+
+5) HOKEY gra w odwróconej fazie dla zniekształcenia $A (pure tone)
 
 # Downloads
 
