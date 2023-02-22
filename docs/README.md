@@ -875,7 +875,7 @@ Both envelopes match.
 
 # Conslusions
 
-1) HOKEY gra za cicho i to nie -6 dB ale raczej -10 dB
+1) HOKEY gra za cicho i to nie -6 dB, ale raczej -10 dB
 
 2) HOKEY jest rozstrojony, bo jest prawdopodobnie przeznaczony dla maszyny NTSC, co w połączeniu z maszyną PAL daje przesunięcie częstotliwości na nieco wyższe
 
