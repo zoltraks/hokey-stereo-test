@@ -887,9 +887,13 @@ Both envelopes match.
 
 # Downloads
 
-All sounds were compressed in OGG format with highest quality (q=10).
+Recordings are available to download in compressed OGG format made with the highest quality (q=10).
 
 [Google Drive](https://drive.google.com/drive/folders/1wB2agwoQ7CWhYTWNTUjPmV-92VNQERBi?usp=share_link)
+
+This quality is still enough to further analysis.
+
+And we got 1/4 the size comparing to uncompressed data.
 
 ## Frequency tables
 
