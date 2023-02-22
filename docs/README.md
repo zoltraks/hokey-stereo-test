@@ -879,7 +879,7 @@ Both envelopes match.
 
 2) HOKEY is out of tune because it is probably intended to be used in NTSC machine, which, when combined with a PAL machine, results in a frequency shift to slightly higher frequencies (450 Hz vs 440 Hz)
 
-3) HOKEY plays in inverted phase
+3) HOKEY tends to play in inverted phase
 
 4) HOKEY does not play the highest noise frequencies (distortion $8, divisor $00)
 
