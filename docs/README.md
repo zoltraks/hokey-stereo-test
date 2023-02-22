@@ -875,15 +875,15 @@ Both envelopes match.
 
 # Conslusions
 
-1) HOKEY gra za cicho i to nie -6 dB, ale raczej -10 dB
+1) HOKEY plays too quietly, and not -6 dB, but rather -10 dB
 
-2) HOKEY jest rozstrojony, bo jest prawdopodobnie przeznaczony dla maszyny NTSC, co w połączeniu z maszyną PAL daje przesunięcie częstotliwości na nieco wyższe
+2) HOKEY is out of tune because it is probably intended to be used in NTSC machine, which, when combined with a PAL machine, results in a frequency shift to slightly higher frequencies (450 Hz vs 440 Hz)
 
-3) HOKEY nie odgrywa najwyższych częstotliwości szumów
+3) HOKEY plays in inverted phase
 
-4) HOKEY ma jakieś bugi w generowaniu czystego tonu (ale może być to wynikiem punktu drugiego)
+4) HOKEY does not play the highest noise frequencies (distortion $8, divisor $00)
 
-5) HOKEY gra w odwróconej fazie dla zniekształcenia $A (pure tone)
+5) HOKEY has errors in generating a clean tone (might be a result of point two)
 
 # Downloads
 
