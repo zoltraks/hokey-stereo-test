@@ -40,6 +40,14 @@ It should be noted that HOKEY is dedicated for use by multicards.
 
 This document contains the results of testing the use of the HOKEY basic chip as a second sound chip for STEREO extension in PAL machine.
 
+## Credits
+
+|||
+|-|-|
+|Filip Golewski|**ZoltarX**|
+|Vin Samuel|**VinsCool**|
+|Grzegorz Żyła|**SuN**|
+
 ## Test kit
 
 <div style="max-width: 900px">
@@ -162,6 +170,42 @@ In first configuration bipolarized audio capacitors were used.
 
 [CHECK 4.xex](../download/CHECK%204.xex)
 
+**CHECK 5** uses 1/2 and 3/4 generators to determine differences in phase shift. 
+
+[CHECK 5.rmt](../download/CHECK%205.rmt)
+
+[CHECK 5.xex](../download/CHECK%205.xex)
+
+**CHECK 6** is a pure tone test using two lowest sounds $FF and $FE in 64 kHz mode played on both sound chips to find the proper tuning. 
+
+[CHECK 6.rmt](../download/CHECK%206.rmt)
+
+[CHECK 6.xex](../download/CHECK%206.xex)
+
+**CHECK FE** is similar test using two lowest sounds $FF and $FE in 64 kHz mode played on each generator. 
+
+[CHECK FE.rmt](../download/CHECK%20FE.rmt)
+
+[CHECK FE.xex](../download/CHECK%20FE.xex)
+
+**CHECK FD** is using $FF and $FD in 64 kHz mode to find the proper tuning. 
+
+[CHECK FD.rmt](../download/CHECK%20FD.rmt)
+
+[CHECK FD.xex](../download/CHECK%20FD.xex)
+
+**CHECK FC** is using $FF and $FC in 64 kHz mode. 
+
+[CHECK FC.rmt](../download/CHECK%20FC.rmt)
+
+[CHECK FC.xex](../download/CHECK%20FC.xex)
+
+**CHECK AF** tests frequency differences for division values +1 / -1 for notes in range C-3 to B-5. 
+
+[CHECK AF.rmt](../download/CHECK%20AF.rmt)
+
+[CHECK AF.xex](../download/CHECK%20AF.xex)
+
 # Tests
 
 ## Scenarios
@@ -246,6 +290,23 @@ During the play, volume is increased from minimum to maximum.
 ![](../media/RMT%20CHECK%204%20A.png)
 
 ![](../media/RMT%20CHECK%204%20B.png)
+
+### ``CHECK 5``
+---
+
+![](../media/ALL%20CHECK%205%20OVERVIEW.png)
+
+![](../media/ALL%20CHECK%205%20FRAGMENT.png)
+
+Playing sound on the lowest and highest possible divisor values for pure tone ``$A`` and noise ``$8`` distortions.
+
+Notes are played once on first channel, then on third to check difference between 1/2 and 3/4 sound generators as they are supposed to play in different phases.
+
+Simple music using possible interferences between 2nd and 4th channel is played at the end.
+
+![](../media/RMT%20CHECK%205%20A.png)
+
+![](../media/RMT%20CHECK%205%20B.png)
 
 ## Songs
 ---
@@ -381,6 +442,30 @@ This test totally fails on HOKEY.
 It is almost perfect for MAX.
 
 ![](../media/MAX%201%20CHECK%204.png)
+
+### ```CHECK 5```
+---
+
+![](../media/CHECK%205%20PHASE%20CHECK%201.png)
+
+![](../media/CHECK%205%20PHASE%20CHECK%201.png)
+
+Phase shift can be observed when playing the same notes betweek POKEY and HOKEY.
+
+![](../media/CHECK%205%20PHASE%20DIFFERENCE%201.png)
+
+![](../media/CHECK%205%20PHASE%20DIFFERENCE%201.png)
+
+### ```CHECK AF```
+---
+
+![](../media/CHECK%20AF%20TUNE%201.png)
+
+![](../media/CHECK%20AF%20TUNE%203.png)
+
+![](../media/NOTE%20FREQUENCY%201.png)
+
+[NOTE FREQUENCY.ods](../download/NOTE%20FREQUENCY.ods)
 
 ## Songs
 
@@ -938,3 +1023,7 @@ Atari Age forum posts from the producer of Concerto and HOKEY.
 https://forums.atariage.com/topic/314517-concerto-sd-card-multicart-ordering-info/
 
 https://forums.atariage.com/topic/321741-hokey-demo/?do=findComment&comment=4968839
+
+https://forums.atariage.com/topic/348255-dkr-wip/
+
+https://forums.atariage.com/topic/346754-hokey-pokey-sound-issues/
