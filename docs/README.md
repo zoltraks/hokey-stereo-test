@@ -1035,7 +1035,7 @@ And we got 1/4 the size comparing to uncompressed data.
 
 The following frequency tables were generated using the program ``RMT 1.34 2023-01-01``.
 
-Frequency table for tone A, distortion $A (czyty ton) for 64 kHz audio clock.
+Frequency table for tone A, distortion $A (pure tone) for 64 kHz audio clock.
 
 | | POKEY (PAL) | POKEY (NTSC) | |
 |-|-|-|-|
