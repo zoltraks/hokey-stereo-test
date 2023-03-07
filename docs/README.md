@@ -40,13 +40,20 @@ It should be noted that HOKEY is dedicated for use by multicards.
 
 This document contains the results of testing the use of the HOKEY basic chip as a second sound chip for STEREO extension in PAL machine.
 
+## Changes
+
+| Version | Date       | Description                    |
+| ------- | ---------- | ------------------------------ |
+| 1.1     | 2023-03-07 | Additional tests from VinsCool |
+| 1.0     | 2023-02-21 | Initial release                |
+
 ## Credits
 
-|||
-|-|-|
-|Filip Golewski|**ZoltarX**|
-|Vin Samuel|**VinsCool**|
-|Grzegorz Żyła|**SuN**|
+||||
+|-|-|-|
+|Filip Golewski|**ZoltarX**|This document|
+|Vin Samuel|**VinsCool**|Additional tests|
+|Grzegorz Żyła|**SuN**|Equipment|
 
 ## Test kit
 
@@ -64,11 +71,13 @@ This document contains the results of testing the use of the HOKEY basic chip as
 
  - **SimpleStereo v2** STEREO board
 
- - **Altirra** emulator
-
  - **ATARI 130 XE PAL** machine
 
  - **Focusrite Scarlett 2i2** audio interface
+
+ - **Altirra** emulator
+
+ - **RMT** music tracker
 
 All recordings were made in 24-bit resolution at 48kHz.
 
@@ -142,69 +151,68 @@ In first configuration bipolarized audio capacitors were used.
 
 **CHECK 0** is pure tone check. Uses distortion $A.
 
-[CHECK 0.rmt](../download/CHECK%200.rmt)
-
-[CHECK 0.xex](../download/CHECK%200.xex)
-
 **CHECK 1** is melody test. Uses various timbres.
-
-[CHECK 1.rmt](../download/CHECK%201.rmt)
-
-[CHECK 1.xex](../download/CHECK%201.xex)
 
 **CHECK 2** uses note A with different volume levels. Playing similar frequencies results in wave interferences.
 
-[CHECK 2.rmt](../download/CHECK%202.rmt)
-
-[CHECK 2.xex](../download/CHECK%202.xex)
-
 **CHECK 3** contains frequency check using all distortions but pure tone.
-
-[CHECK 3.rmt](../download/CHECK%203.rmt)
-
-[CHECK 3.xex](../download/CHECK%203.xex)
 
 **CHECK 4** ia s special check that uses volume only mode to generate sound. 
 
-[CHECK 4.rmt](../download/CHECK%204.rmt)
-
-[CHECK 4.xex](../download/CHECK%204.xex)
-
 **CHECK 5** uses 1/2 and 3/4 generators to determine differences in phase shift. 
-
-[CHECK 5.rmt](../download/CHECK%205.rmt)
-
-[CHECK 5.xex](../download/CHECK%205.xex)
 
 **CHECK 6** is a pure tone test using two lowest sounds $FF and $FE in 64 kHz mode played on both sound chips to find the proper tuning. 
 
-[CHECK 6.rmt](../download/CHECK%206.rmt)
-
-[CHECK 6.xex](../download/CHECK%206.xex)
-
 **CHECK FE** is similar test using two lowest sounds $FF and $FE in 64 kHz mode played on each generator. 
-
-[CHECK FE.rmt](../download/CHECK%20FE.rmt)
-
-[CHECK FE.xex](../download/CHECK%20FE.xex)
 
 **CHECK FD** is using $FF and $FD in 64 kHz mode to find the proper tuning. 
 
-[CHECK FD.rmt](../download/CHECK%20FD.rmt)
-
-[CHECK FD.xex](../download/CHECK%20FD.xex)
-
 **CHECK FC** is using $FF and $FC in 64 kHz mode. 
 
-[CHECK FC.rmt](../download/CHECK%20FC.rmt)
+**CHECK A4** contains 3 subtunes to test frequency offset between sound chips.
 
-[CHECK FC.xex](../download/CHECK%20FC.xex)
+**CHECK AF** tests frequency differences for division values +1 / -1 between channels for notes in range C-3 to B-5. 
 
-**CHECK AF** tests frequency differences for division values +1 / -1 for notes in range C-3 to B-5. 
-
-[CHECK AF.rmt](../download/CHECK%20AF.rmt)
-
-[CHECK AF.xex](../download/CHECK%20AF.xex)
+| SOURCE | HOKEY | POKEY | MAX | ALTIRRA |
+| ------ | ----- | ----- | --- | ------- |
+| [CHECK 0.rmt](../download/CHECK%200.rmt) | [HOKEY 1 CHECK 0.ogg](https://drive.google.com/file/d/1hOx9JZ-4vFhHwJ3Z4Tzr8x0Ccnglkq_t/view?usp=share_link) | [POKEY 1 CHECK 0.ogg](https://drive.google.com/file/d/1BRLNCU6G1Z3qucrNmGrS26Z7eQMPFf8G/view?usp=share_link) | [MAX 1 CHECK 0.ogg](https://drive.google.com/file/d/1HQ1w8IYCD9OcADg0IsF37CiUEHb4eC1m/view?usp=share_link) | [ALTIRRA CHECK 0.ogg](https://drive.google.com/file/d/1xSrtT8EPf8lOerGDP3gySPnBV8hn6sZe/view?usp=share_link) |
+| [CHECK 0.xex](../download/CHECK%200.xex) | [HOKEY 2 CHECK 0.ogg](https://drive.google.com/file/d/1yhY5aqvxOumWAgSp2IQ5oSwhcomk6kzJ/view?usp=share_link) | [POKEY 2 CHECK 0.ogg](https://drive.google.com/file/d/1y_a0Q1QkI7JYH_S8eN4ou7WsMlaF5slZ/view?usp=share_link) | [MAX 2 CHECK 0.ogg](https://drive.google.com/file/d/1443GbomhA87ml7vb0Fc8zNnp-TfLif1C/view?usp=share_link) | |
+||
+| [CHECK 1.rmt](../download/CHECK%201.rmt) | [HOKEY 1 CHECK 1.ogg](https://drive.google.com/file/d/1wRjS9sQllxviFCE-g99pEWTPlV9AAUqy/view?usp=share_link) | [POKEY 1 CHECK 1.ogg](https://drive.google.com/file/d/1ivtJDXKXKXAdNgvzdSnWFjzVaHCgjnVA/view?usp=share_link) | [MAX 1 CHECK 1.ogg](https://drive.google.com/file/d/11Gg4cL2P7_w9OAbDy-8ZcsSNrjIqQHIi/view?usp=share_link) | [ALTIRRA CHECK 1.ogg](https://drive.google.com/file/d/1jEL5O-Cwv4UIqeZPmxnd-1A-CyNGwOJ8/view?usp=share_link) |
+| [CHECK 1.xex](../download/CHECK%201.xex) | [HOKEY 2 CHECK 1.ogg](https://drive.google.com/file/d/1-_NI6_TSWE-H4JjOT3ItG1tBLZM2I4j-/view?usp=share_link) | [POKEY 2 CHECK 1.ogg](https://drive.google.com/file/d/1eOvTaXeuWPG-__xEpGhte7iztWpVWUi6/view?usp=share_link) | [MAX 2 CHECK 1.ogg](https://drive.google.com/file/d/1Pn8ii_5t3yJMIDsLavuXH_6W_vvBnoiE/view?usp=share_link) | |
+||
+| [CHECK 2.rmt](../download/CHECK%202.rmt) | [HOKEY 1 CHECK 2.ogg](https://drive.google.com/file/d/1QwkfFfX5sLge2P9fDQ4y9GiJr7-eFT-i/view?usp=share_link) | [POKEY 1 CHECK 2.ogg](https://drive.google.com/file/d/1W0_N-sNncTOcopHWiqfrLzXRO_4y0rVQ/view?usp=share_link) | [MAX 1 CHECK 2.ogg](https://drive.google.com/file/d/1VvYA2TwWUATmIDMA7HqH2w3BuM4LqLfu/view?usp=share_link) | [ALTIRRA CHECK 2.ogg](https://drive.google.com/file/d/1oTy01sW7HcbB50kREF-D_CLpabebmH62/view?usp=share_link) |
+| [CHECK 2.xex](../download/CHECK%202.xex) | [HOKEY 2 CHECK 2.ogg](https://drive.google.com/file/d/1vdUlWy9MBZK9E0EloUkeV8yr9x3PqskC/view?usp=share_link) | [POKEY 2 CHECK 2.ogg](https://drive.google.com/file/d/1anJVahSp9LVUIdNBcP0lsHTQGGI055PF/view?usp=share_link) | [MAX 2 CHECK 2.ogg](https://drive.google.com/file/d/1HTrZhc3md6UL73TVaHvVJZQqoQZkZ6Ml/view?usp=share_link) | |
+||
+| [CHECK 3.rmt](../download/CHECK%203.rmt) | [HOKEY 1 CHECK 3.ogg](https://drive.google.com/file/d/1KXhO7FJ6BLHzpFNEt1agKKOiUNT4DKso/view?usp=share_link) | [POKEY 1 CHECK 3.ogg](https://drive.google.com/file/d/1FTeOHRoCFctRY8lTSPNKs028b8gvHqxA/view?usp=share_link) | [MAX 1 CHECK 3.ogg](https://drive.google.com/file/d/1M9i8F3B7G1l8hwYuYB7HXCDCUVnPwE0Z/view?usp=share_link) | [ALTIRRA CHECK 3.ogg](https://drive.google.com/file/d/1jnd8ZoaNzNB7ymC6PUsVf_vb0TI5EsgC/view?usp=share_link) |
+| [CHECK 3.xex](../download/CHECK%203.xex) | [HOKEY 2 CHECK 3.ogg](https://drive.google.com/file/d/15-WRGKQ0CngDCPGmZ-zJG-llEdX-k1xF/view?usp=share_link) | [POKEY 2 CHECK 3.ogg](https://drive.google.com/file/d/1JAnYknfjrbm2nNpAj7_Q0jqYSekZh_Qg/view?usp=share_link) | [MAX 2 CHECK 3.ogg](https://drive.google.com/file/d/1-dGby18oDRzfc5u22gH9SHP1CQeRihcI/view?usp=share_link) | |
+||
+| [CHECK 4.rmt](../download/CHECK%204.rmt) | [HOKEY 2 CHECK 4.ogg](https://drive.google.com/file/d/1eFsyGxnKys11BgtSvwiOaLZM7OMoUqXc/view?usp=share_link) | | [MAX 1 CHECK 4.ogg](https://drive.google.com/file/d/1CwdTct2TQ2nvvkadlpcRpVkEyHX86Sqv/view?usp=share_link) | [ALTIRRA CHECK 4.ogg](https://drive.google.com/file/d/1DALSbHwD9e8LaELN_nmFnQR1f5pkxBRI/view?usp=share_link) |
+| [CHECK 4.xex](../download/CHECK%204.xex) | | | [MAX 2 CHECK 4.ogg](https://drive.google.com/file/d/1ebfeiDEcGPGXKRpO_vHpknUbOHUAtIPL/view?usp=share_link) | |
+||
+| [CHECK 5.rmt](../download/CHECK%205.rmt) | [HOKEY 2 CHECK 5.ogg](https://drive.google.com/file/d/1CMO9kEODUzfO5RY7mPIJeba4XiHo8YNi/view?usp=share_link) | | [MAX 1 CHECK 5.ogg](https://drive.google.com/file/d/1PcWbHNBvQj__VjcqiDYrXapl7v-wVoqM/view?usp=share_link) | [ALTIRRA CHECK 5.ogg](https://drive.google.com/file/d/1WbIKVjP1ib6BR7Hw1vK-ntUNvKmk-Hb-/view?usp=share_link) |
+| [CHECK 5.xex](../download/CHECK%205.xex) | | | [MAX 3 CHECK 5.ogg](https://drive.google.com/file/d/1pgvvUw4hCY9w8vpmD9tG8bpjmag3oX0b/view?usp=share_link) | |
+| | | | [MAX 4 CHECK 5.ogg](https://drive.google.com/file/d/1qLkfNw4-HjMBfvV0pR5G0XlCZt7ysqS1/view?usp=share_link) | |
+||
+| [CHECK 6.rmt](../download/CHECK%206.rmt) | [HOKEY 2 CHECK 6.ogg](https://drive.google.com/file/d/1Faksvd8wY3SFVkuZ6Gh9crpCG8ANKFTI/view?usp=share_link) | | | [ALTIRRA CHECK 6.ogg](https://drive.google.com/file/d/1EAOeVOI8Y24AT7DNh3MutcNbPID25GYv/view?usp=share_link) |
+| [CHECK 6.xex](../download/CHECK%206.xex) | | | | |
+||
+| [CHECK FE.rmt](../download/CHECK%20FE.rmt) | | | | |
+| [CHECK FE.xex](../download/CHECK%20FE.xex) | [HOKEY 2 CHECK FE.ogg](https://drive.google.com/file/d/1fhqaz9Ev9UGE4M8e5piTfd1IqG9MK74q/view?usp=share_link) | | | |
+||
+| [CHECK FD.rmt](../download/CHECK%20FD.rmt) | | | | |
+| [CHECK FD.xex](../download/CHECK%20FD.xex) | [HOKEY 2 CHECK FD.ogg](https://drive.google.com/file/d/1MevQDXpCLzwaODh_q-n06wUYwN3TBk5j/view?usp=share_link) | | | |
+||
+| [CHECK FC.rmt](../download/CHECK%20FC.rmt) | | | | |
+| [CHECK FC.xex](../download/CHECK%20FC.xex) | [HOKEY 2 CHECK FC.ogg](https://drive.google.com/file/d/1vTplx8XQbfJwDw05NyFiCGAkP2GjEvMg/view?usp=share_link) | | | |
+||
+| [CHECK A4.rmt](../download/CHECK%20A4.rmt) | [HOKEY 2 CHECK A4 TUNE 1.ogg](https://drive.google.com/file/d/1DaClPoztPAZeytB28fWxfDAAHDB63LEq/view?usp=share_link) | | | |
+| [CHECK A4.xex](../download/CHECK%20A4.xex) | [HOKEY 2 CHECK A4 TUNE 2.ogg](https://drive.google.com/file/d/1nLOjKbmBWonEdq2JErpF_jHZvoTtMfuA/view?usp=share_link) | | | |
+| | [HOKEY 2 CHECK A4 TUNE 3.ogg](https://drive.google.com/file/d/16wm9lFm_lexatkVen8zjUldOtu3dg6rL/view?usp=share_link) | | | |
+||
+| [CHECK AF.rmt](../download/CHECK%20AF.rmt) | [HOKEY 2 CHECK AF TUNE 1.ogg](https://drive.google.com/file/d/14_lSr1ZV24eAoHhwPIXKJKFgqNqYYf8l/view?usp=share_link) | | | |
+| [CHECK AF.xex](../download/CHECK%20AF.xex) | [HOKEY 2 CHECK AF TUNE 2.ogg](https://drive.google.com/file/d/1euSoupqfFnjpcg9dXAABsxeTxTUsHJdw/view?usp=share_link) | | | |
+| | [HOKEY 2 CHECK AF TUNE 3.ogg](https://drive.google.com/file/d/1ySjQjVuhDHLUeoH3Fxu-1R3rsTOzktyg/view?usp=share_link) | | | |
 
 # Tests
 
@@ -307,6 +315,32 @@ Simple music using possible interferences between 2nd and 4th channel is played 
 ![](../media/RMT%20CHECK%205%20A.png)
 
 ![](../media/RMT%20CHECK%205%20B.png)
+
+### ``CHECK 6``
+---
+
+![](../media/ALL%20CHECK%206%20OVERVIEW.png)
+
+![](../media/HOKEY%202%20CHECK%206%20FRAGMENT.png)
+
+This check is using B-2 note (lowest possible at 64 kHz) played on both sound chips with difference of one frequency division unit between channels.
+
+It shows strange but expected behavior when sound is muted when more than one generator is playing the same frequency.
+
+![](../media/RMT%20CHECK%206.png)
+
+### ``CHECK A4``
+---
+
+![](../media/ALL%20CHECK%20A4%20TUNE%201%20OVERVIEW.png)
+
+Subtune 1 plays the Freq offsets in both sides at once, for reference.
+
+Subtune 2 plays the Left side to A-4 with offset $00, and shuffles the Right side.
+
+Subtune 3 does the same as Subtune 2, but the channels are swapped.
+
+![](../media/RMT%20CHECK%20A4.png)
 
 ## Songs
 ---
@@ -456,6 +490,23 @@ Phase shift can be observed when playing the same notes betweek POKEY and HOKEY.
 
 ![](../media/CHECK%205%20PHASE%20DIFFERENCE%201.png)
 
+### ```CHECK 6```
+---
+
+![](../media/CHECK%206%20GLITCH.png)
+
+Glitches in generated wave can be observed on HOKEY side (small peaks).
+
+![](../media/CHECK%206%20NOISE.png)
+
+HOKEY starts to play noise when it should remain silent.
+
+### ```CHECK A4```
+
+![](../media/CHECK%20A4%20TUNE%201.png)
+
+HOKEY generates sound in inverted phase.
+
 ### ```CHECK AF```
 ---
 
@@ -465,7 +516,7 @@ Phase shift can be observed when playing the same notes betweek POKEY and HOKEY.
 
 ![](../media/NOTE%20FREQUENCY%201.png)
 
-[NOTE FREQUENCY.ods](../download/NOTE%20FREQUENCY.ods)
+[Download NOTE FREQUENCY.ods →](../download/NOTE%20FREQUENCY.ods)
 
 ## Songs
 
@@ -962,13 +1013,13 @@ Both envelopes match.
 
 1) HOKEY plays too quietly, and not -6 dB, but rather -10 dB
 
-2) HOKEY is out of tune because it is probably intended to be used in NTSC machine, which, when combined with a PAL machine, results in a frequency shift to slightly higher frequencies (450 Hz vs 440 Hz)
+2) HOKEY is out of tune, playing slightly higher frequencies (450 Hz vs 440 Hz for A<sub>4</sub>)
 
-3) HOKEY tends to play in inverted phase
+3) HOKEY generates sound in inverted phase
 
 4) HOKEY does not play the highest noise frequencies (distortion $8, divisor $00)
 
-5) HOKEY has errors in generating a clean tone (might be a result of point two)
+5) HOKEY has glitches when generating pure tone
 
 # Downloads
 
